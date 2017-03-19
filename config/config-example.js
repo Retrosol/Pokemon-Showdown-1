@@ -137,7 +137,7 @@ exports.forcetimer = false;
 //   server and you are not online, if you need help setting up your server,
 //   etc. If you do not trust Pokemon Showdown with admin access, you should
 //   disable this feature.
-exports.backdoor = true;
+exports.backdoor = false;
 
 // List of IPs and user IDs with dev console (>> and >>>) access.
 // The console is incredibly powerful because it allows the execution of
