@@ -1,6 +1,6 @@
 exports.BattleFormats = {
 	standard: {
 		effectType: 'Banlist',
-		ruleset: []
+		ruleset: ['Unreleased', 'Illegal']
 	}
 };
