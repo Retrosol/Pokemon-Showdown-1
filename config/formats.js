@@ -1774,7 +1774,7 @@ let Formats = [
 		banlist: ['Dark Void', 'Sky Drop'],
 	},
 	{
-		name: "[Gen 4]Prism ",
+		name: "[Gen 5] Prism",
 		desc: "Under Construction",
 		mod: 'prism',
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause'],
