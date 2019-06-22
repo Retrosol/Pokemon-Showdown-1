@@ -17012,6 +17012,16 @@ let BattleMovedex = {
 		pp: 15,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, nonsky: 1},
+		self: {
+			onHit(pokemon) {
+				let sideConditions = ['lavapool'];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add('-sideend', pokemon.side, this.getEffect(condition).name, '[from] move: Surf', '[of] ' + pokemon);
+					}
+				}
+			},
+		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Water",
