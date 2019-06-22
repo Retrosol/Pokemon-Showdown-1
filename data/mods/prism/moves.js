@@ -185,7 +185,7 @@ exports.BattleMovedex = {
         pp: 20,
         priority: 0,
         flags: {protect: 1, mirror: 1},
-		onEffectiveness(typeMod, target, type) {
+		onEffectiveness(totalTypeMod, target, type) {
 			if (type === 'Water') return 1;
 		},
         secondary: false,

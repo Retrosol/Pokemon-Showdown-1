@@ -5979,6 +5979,25 @@ let BattleMovedex = {
 		zMovePower: 140,
 		contestType: "Beautiful",
 	},
+	"boil": {
+		accuracy: 100,
+        basePower: 75,
+        category: "Special",
+        desc: "This move is strong against Water types.",
+        shortDesc: "Does more damage to Water types",
+        id: "boil",
+        name: "Boil",
+        pp: 20,
+        priority: 0,
+        flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Water') return 1;
+		},
+        secondary: false,
+        target: "normal",
+        type: "Fire",
+        contestType: "Clever",
+    	},
 	"freezeshock": {
 		num: 553,
 		accuracy: 90,

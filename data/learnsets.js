@@ -4336,6 +4336,7 @@ let BattleLearnsets = {
 	ninetales: {learnset: {
 		attract: ["7M", "7V", "6M", "5M", "4M", "3M"],
 		bide: ["7V"],
+		boil: ["4M"],
 		bodyslam: ["7V", "3T"],
 		calmmind: ["7M", "6M", "5M", "4M"],
 		captivate: ["4M"],
