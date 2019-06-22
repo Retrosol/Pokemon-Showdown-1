@@ -174,24 +174,24 @@ exports.BattleMovedex = {
 		inherit: true,
 		accuracy: 75,
 	},
-	boil: {
+	"boil": {
 		accuracy: 100,
-        	basePower: 75,
-        	category: "Special",
-        	desc: "This move is strong against Water types.",
-        	shortDesc: "Does more damage to Water types",
-        	id: "boil",
-        	name: "Boil",
-        	pp: 20,
-        	priority: 0,
-        	flags: {protect: 1, mirror: 1},
-        	onEffectiveness: function (typeMod, type) {
-            		if (type === 'Water') return 1;
-        	},
-        	secondary: false,
-        	target: "normal",
-        	type: "Fire",
-        	contestType: "Clever",
+        basePower: 75,
+        category: "Special",
+        desc: "This move is strong against Water types.",
+        shortDesc: "Does more damage to Water types",
+        id: "boil",
+        name: "Boil",
+        pp: 20,
+        priority: 0,
+        flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Water') return 1;
+		},
+        secondary: false,
+        target: "normal",
+        type: "Fire",
+        contestType: "Clever",
     	},
 	bonerush: {
 		inherit: true,
@@ -791,7 +791,7 @@ exports.BattleMovedex = {
 			},
 			onSwitchIn: function (pokemon) {
 				if (!pokemon.isGrounded()) return;
-				if (!pokemon.runImmunity('Burn')) return;
+				if (!pokemon.runStatusImmunity('Burn')) return;
 				if (pokemon.hasType('Fire')) return;
 				pokemon.trySetStatus('brn', pokemon.side.foe.active[0]);
 			},

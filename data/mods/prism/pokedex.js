@@ -101,6 +101,7 @@ exports.BattlePokedex = {
 		eggGroups: ["None"]
 	},
 	phancero : {
+		num: 601,
 		species: "Phancero",
 		types: ["Ghost", "Flying"],
 		genderRatio: {M: 0, F: 0},
@@ -123,6 +124,7 @@ exports.BattlePokedex = {
 		eggGroups: ["None"]
 	},
 	varaneous : {
+		num: 600,
 		species: "Varaneous",
 		types: ["Fire", "Water"],
 		genderRatio: {M: 0, F: 0},
